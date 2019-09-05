@@ -1,0 +1,419 @@
+<html>
+    <head>
+        <style>
+                h1,
+                h2,
+                h3,
+                h4,
+                h5,
+                h6 {
+                    padding: 0px;
+                    margin: 0px;
+                }
+                a {
+                    text-decoration: none;
+                }
+        
+                p {
+                    padding: 0px;
+                    margin: 0px;
+                }
+        
+                ul,
+                li {
+                    margin: 0px;
+                    padding: 0px;
+                    list-style: none;
+                }
+            </style>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+              </head>
+            <body bgcolor="#fff">
+                <table align="center" width="600" bgcolor="#f2f2f2" style="border-spacing: 0px;padding:40px 0px">
+                    <tr>
+                        <td style="padding:0px 40px;">
+                            <div style="padding-bottom: 12px;">
+                                <span style="font-family:DIN Next LT Pro;font-size: 8px;color:#191919">xx/xx/2019</span>
+                                <label style="width: 20px;background-color: #191919;height: 1px;display: inline-block;vertical-align: middle;margin: 0px 3px;"></label>
+                                <span style="font-family:DIN Next LT Pro;font-size: 8px;color:#191919">xx/xx/2019</span>
+                            </div>
+                            <div style="padding-bottom: 24px;">
+                                <h1 style="font-size: 20px;color:#000;font-family:DIN Next LT Pro;display:inline-block;letter-spacing: .4px;line-height: 22px;margin-right: 7px;">Hello </h1>
+                                <h2 style="font-size: 20px;color:#CCCCCC;font-family:DIN Next LT Pro;display:inline-block;letter-spacing: .4px;line-height: 22px;">Pradeep Kumar</h2>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div style="height:40px">
+                                <svg xmlns="http://www.w3.org/2000/svg">
+                                    <g>
+                                        <rect x="-20" y="0" width="150" height="40" fill="#000" rx="25"></rect>
+                                        <text x="39" y="25" font-size="14" fill="#fff" font-family="DIN Next LT Pro">RIDE
+                                        </text>
+                                </svg>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 30px 40px;">
+                            <div>
+                                <span style="font-family:DIN Next LT Pro;font-size: 14px;color:#CCCCCC">DISTANCE</span>
+                                <span style="font-family:DIN Next LT Pro;font-size: 14px;color:#000">KM</span>
+                            </div>
+                            <div>
+                                <div style="display: inline-block;font-size: 100px;font-family: DIN Condensed;
+                                width: 30%;height: 80px;"> 
+                                       <label>26.2 </label> 
+                                </div>
+                                <div style="display: inline-block;vertical-align:top;width: 60%;margin-top: 6px;">
+                                    <span style="display: inline-block;margin-bottom: 12px;">
+                                        <canvas id="blue-bar" width="250" height="32"
+                                        style="border-radius:20px">
+                                        </canvas>
+                                            <!-- <svg xmlns="http://www.w3.org/2000/svg">
+                                                <g>
+                                                  <rect x="0" y="0" width="400" height="40" fill="blue" rx="25"></rect>
+                                                  <text x="50" y="30" font-size="20" fill="#fff" font-family= "arial">RIDE</text>
+                                                </g>
+                                              </svg> -->
+                                    </span>
+                                   <span>
+                                        <canvas id="red-bar" width="350" height="32"
+                                        style="border-radius:20px">
+                                        </canvas>
+                                   </span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding:0px 40px;">
+                            <div style="border-top:1px solid #ccc;border-bottom:1px solid #ccc;border-radius: 4px;">
+                                <div style="display:inline-block;width:69%;padding: 30px 0px;">
+                                    <span style="font-family:DIN Next LT Pro;font-size: 14px;color:#CCCCCC">EFFICIENCY</span>
+                                    <span style="font-family:DIN Next LT Pro;font-size: 14px;color:#000">WH/KM</span>
+                                    <div style="margin-top:15px;margin-bottom:6px;">
+                                    <canvas id="efficiency-bar" class="efficiency-bar" height="50" width="120"
+                                        style="border-radius: 15px;
+                                        border-top-right-radius: 30px;
+                                        border-bottom-right-radius: 30px;">
+                                    </canvas>
+                                    </div>
+                                    <div>
+                                        <canvas id="community-bar" width="330" height="20"
+                                            style="border-radius: 15px;">
+                                        </canvas>
+                                    </div>
+                                </div>
+                                <div style="padding: 30px 0px;display: inline-block;vertical-align: top;border-left: 1px solid #ccc;width: 22%;padding-left: 40px;">
+                                        <span style="font-family:DIN Next LT Pro;font-size: 14px;color:#CCCCCC">TOP SPEED</span>
+                                        <span style="font-family:DIN Next LT Pro;font-size: 14px;color:#000;display: block;">KMPH</span>
+                                         <label style="margin-top:15px;display:inline-block;font-family: DIN Condensed;
+                                        font-size: 80px;height: 75px;">60</label>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding:0px 40px;">
+                                <div style="padding:30px 0px;display:inline-block;width:50%;">
+                                        <span style="font-family:DIN Next LT Pro;font-size: 14px;color:#CCCCCC">RANGE</span>
+                                        <span style="font-family:DIN Next LT Pro;font-size: 14px;color:#000;">KM/CHARGE</span>
+                                </div>
+                                <div style="padding:10px 0px;display:inline-block;width:49%;vertical-align: middle;height: 40px;">
+                                    <ul>
+                                        <li style="display:inline-block;padding-right: 60px;padding-left: 20px;">
+                                            <label style="font-family: DIN Condensed;font-size:45px"><sup style="font-size:25px;color:#0069F6">R</sup>69.6</label>
+                                        </li>
+                                        <li style="display:inline-block;">
+                                            <label style="font-family: DIN Condensed;font-size:45px"><sup style="font-size:25px;color:#F15A24">S</sup>58.2</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding:0px 40px;">
+                            <div style="background-color:#DDDDDD;padding: 1px 10px;
+                            height: 20px;">
+                                <div style="display:inline-block;width: 50%;">
+                                        <label style="font-family:DIN Next LT Pro;font-size: 10px;"><span></span>Community median</label>
+                                </div>
+                                <div style="display:inline-block;width:49%">
+                                    <ul>
+                                        <li style="display:inline-block;padding:0px 50px;">
+                                            <label style="font-family:DIN Next LT Pro;font-size: 10px;">82.4</label>
+                                        </li>
+                                        <li style="display:inline-block;padding-left: 65px;">
+                                            <label style="font-family:DIN Next LT Pro;font-size: 10px;">58.3</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding:0px 40px">
+                            <div style="padding:30px 0px;">
+                                <label style="color:#ccc;font-family:DIN Next LT Pro;font-size:16px;">On <span style=color:#000;>08/04/2019, </span> you rode from <span style=color:#000;> Corcorde Manhatten Apartments (11:22) </span style=color:#000;> to <span style=color:#000;> Corcorde Manhatten Apartments </span style=color:#000;> at an avearge speed of<span style=color:#000;> 22.64 kmph </span style=color:#000;>for <span style=color:#000;> 2.3 km </span> with an efficiency of <span style=color:#000;>30.9Wh/km.</sapn> This was your <span style=color:#000;> most efficient ride </span> </label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding:0px 40px;">
+                            <div style="background-color:#fff;">
+                                <div style="display:inline-block;padding:25px;border-right: 1px solid #000;border-left:1px solid #000;border-radius: 4px;">
+                                    <span style="font-family:DIN Next LT Pro;font-size: 14px;color:#CCCCCC;margin-bottom: 3px;display:block">RIDER PROFILE</span>
+                                    <label style="width:100px;display:inline-block;color: #191919;font-size: 20px;">You are a Eco warrior</label>
+                                </div>
+                                <div style="display:inline-block">
+                                    
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- page 2 -->
+                    <tr>
+                        <td>
+                            <div style="height:40px;margin-top:40px;">
+                                <svg xmlns="http://www.w3.org/2000/svg">
+                                    <g>
+                                        <rect x="-20" y="0" width="150" height="40" fill="#000" rx="25"></rect>
+                                        <text x="42" y="25" font-size="14" fill="#fff" font-family="DIN Next LT Pro">CHARGE</text>
+                                    </g>
+                                    </svg>
+                            </div>
+                        </td>
+                        </tr>
+                    <tr>
+                        <td style="padding:0px 40px;">
+                            <div style="margin-top:40px;border-bottom:1px solid #ccc;">
+                                <div style="display:inline-block;width:50%;border-right:1px solid #ccc;">
+                                    <span style="font-family:DIN Next LT Pro;font-size: 14px;color:#CCCCCC">PRIVATE CHRAGING</span>
+                                    <span style="font-family:DIN Next LT Pro;font-size: 14px;color:#000">UNITS</span>
+                                    <div style="margin-top: 20px;margin-bottom: 20px;    display: inline-block;
+                                    width: 80%;">
+                                        <!-- <svg width="150" height="40">
+                                                <rect width="150" height="40" style="fill:#ABAAAF;" />
+                                        </svg> -->
+                                        <!-- <svg width="200" height="40">
+                                                <rect width="200" height="40" style="fill:#F2A182" />
+                                        </svg> -->
+                                     
+                                            <canvas id="grayunits" width="120" height="30"">
+                                            </canvas>
+                                            <canvas id="redunits" width="150" height="40">
+                                            </canvas>
+                                    </div>
+                                    <span style="font-size: 70px;font-family: DIN Condensed;">9</span>
+                                </div>
+                                <div style="display:inline-block;">
+                                    <div style="padding-left: 50px;">
+                                    <span style="font-family:DIN Next LT Pro;font-size: 14px;color:#CCCCCC">ATHERGRID CHARGING</span>
+                                    <span style="font-family:DIN Next LT Pro;font-size: 14px;color:#000">UNITS</span>
+                                    </div>
+                                    <div style=padding-left:20px;>
+                                        <span style="text-align:left;font-size: 70px;font-family: DIN Condensed;">0</span>
+                                        <span style="padding-left:100px;display: inline-block;    vertical-align: top;
+                                        margin-top: 20px;">
+                                            <span style="font-family:DIN Next LT Pro;font-size: 9px;display:block;margin-bottom:25px;">Last month [ 0 units ]</span>
+                                            <span style="font-family:DIN Next LT Pro;font-size: 9px;margin-left:50px;">Jan’19</span>
+                                        </span>
+                                        <span style="margin-top:20px;margin-left:15px;height: 70px;width:2px;display: inline-block;background-color:#F2A182"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding:0px 40px">
+                           <div style="padding:30px 0px">
+                                <span style="font-family:DIN Next LT Pro;font-size: 14px;color:#CCCCCC">CHRAGING PATTERN </span>
+                                <span style="font-family:DIN Next LT Pro;font-size: 14px;color:#000">CHARGING SESSIONS</span>
+                                <span style="display:block;margin-top:30px;">
+                                        <svg width="520" height="60">
+                                                <rect width="550" height="60" style="fill:#DBE4DC" />
+                                        </svg>
+                                </span>
+                                <div style="margin-top:30px;">
+                                    <div style="display:inline-block;width:50%;">
+                                        <p style="font-size: 9px;line-height: 9px;font-family: DIN Next LT Pro">TIP: Will lead with recommendation and then inform them what they need to do to as a tip. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                                    </div>
+                                    <div style="display:inline-block;width:49%;vertical-align: top;">
+                                        <ul>
+                                            <li style="display:inline-block;padding-right: 13px;">
+                                                    <span style="font-family:DIN Next LT Pro;font-size: 14px;color:#CCCCCC;width: 80px;display: inline-block;">AVG. START LEVELS </span>
+                                                    <label style="color:#191919;font-family: DIN Condensed;font-size: 37px;">44%</label>
+                                            </li>
+                                            <li style="display:inline-block;">
+                                                    <span style="font-family:DIN Next LT Pro;font-size: 14px;color:#CCCCCC;width: 68px;display: inline-block;">AVG. END LEVELS</span>
+                                                    <label style="color:#191919;font-family: DIN Condensed;font-size: 37px;">84%</label>
+                                            </li>
+                                           
+                                        </ul>
+                                        <div style="padding:5px;background-color:#DBE4DC;line-height: 0px;"> 
+                                            <span style="display: inline-block;font-size: 9px;line-height: 9px;margin-right: 35px;">
+                                                Recommended
+                                            </span>
+                                            <span style="display: inline-block;font-size: 9px;line-height: 9px;margin-right: 100px;">
+                                                20%
+                                            </span>
+                                            <span style="display: inline-block;font-size: 9px;line-height: 9px;">
+                                                80%
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                           </div> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div style="height:40px;margin-top:40px;">
+                                <svg xmlns="http://www.w3.org/2000/svg">
+                                    <g>
+                                        <rect x="-20" y="0" width="150" height="40" fill="#000" rx="25"></rect>
+                                        <text x="42" y="25" font-size="14" fill="#fff" font-family="DIN Next LT Pro">BADGES</text>
+                                    </g>
+                                    </svg>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding:0px 40px;">
+                            <div style="margin-top:40px;">
+                                <ul>
+                                    <li style="width:90px;display:inline-block;padding:20px 15px;background-color:#fff;margin-right:8px;border-radius: 10px;">
+                                        <span style="margin: 0px auto;
+                                        text-align: center;
+                                        display: block;
+                                        margin-bottom: 15px;">
+                                           <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="#EDDB70" viewBox="0 0 24 24"><path d="M24 16.971l-7.029 7.029h-9.942l-7.029-7.029v-9.942l7.029-7.029h9.942l7.029 7.029z"/></svg>                            
+                                        </span>
+                                        <label style="font-size: 9px;font-family: DIN Next LT Pro;line-height: 9px;      width: 50%;
+                                        display: block;
+                                        margin: 0px auto;
+                                        text-align: center;margin-bottom: 8px;">100 km Range ride</label>
+                                        <p style='text-align: center;font-size: 9px;line-height: 9px;font-family: "DIN Next LT Pro";'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</p>
+                                    </li>
+                                    <li style="width:90px;display:inline-block;padding:20px 15px;background-color:#fff;margin-right:8px;border-radius: 10px;">
+                                            <span style="margin: 0px auto;
+                                            text-align: center;
+                                            display: block;
+                                            margin-bottom: 15px;">
+                                               <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="#A85E92" viewBox="0 0 24 24"><path d="M24 16.971l-7.029 7.029h-9.942l-7.029-7.029v-9.942l7.029-7.029h9.942l7.029 7.029z"/></svg>                            
+                                            </span>
+                                            <label style="font-size: 9px;font-family: DIN Next LT Pro;line-height: 9px;      width: 50%;
+                                            display: block;
+                                            margin: 0px auto;
+                                            text-align: center;margin-bottom: 8px;">90 km Range ride</label>
+                                            <p style='text-align: center;font-size: 9px;line-height: 9px;font-family: "DIN Next LT Pro";'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</p>
+                                    </li>  
+                                    <li style="width:90px;display:inline-block;padding:20px 15px;background-color:#fff;margin-right:8px;border-radius: 10px;">
+                                            <span style="margin: 0px auto;
+                                            text-align: center;
+                                            display: block;
+                                            margin-bottom: 15px;">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="#CDCDCD" viewBox="0 0 24 24"><path d="M24 16.971l-7.029 7.029h-9.942l-7.029-7.029v-9.942l7.029-7.029h9.942l7.029 7.029z"/></svg>                            
+                                            </span>
+                                            <label style="font-size: 9px;font-family: DIN Next LT Pro;line-height: 9px;      width: 50%;
+                                            display: block;
+                                            margin: 0px auto;
+                                            text-align: center;margin-bottom: 8px;">100 km Range ride</label>
+                                            <p style='text-align: center;font-size: 9px;line-height: 9px;font-family: "DIN Next LT Pro";'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</p>
+                                    </li>  
+                                    <li style="width:90px;display:inline-block;padding:20px 15px;background-color:#fff;border-radius: 10px;">
+                                            <span style="margin: 0px auto;
+                                            text-align: center;
+                                            display: block;
+                                            margin-bottom: 15px;">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="#CDCDCD" viewBox="0 0 24 24"><path d="M24 16.971l-7.029 7.029h-9.942l-7.029-7.029v-9.942l7.029-7.029h9.942l7.029 7.029z"/></svg>                            
+                                            </span>
+                                            <label style="font-size: 9px;font-family: DIN Next LT Pro;line-height: 9px;      width: 50%;
+                                            display: block;
+                                            margin: 0px auto;
+                                            text-align: center;margin-bottom: 8px;">100 km Range ride</label>
+                                            <p style='text-align: center;font-size: 9px;line-height: 9px;font-family: "DIN Next LT Pro";'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                </table> 
+                <script>
+                        var blueBar = document.getElementById("blue-bar");
+                        var blueCtx = blueBar.getContext("2d");
+                        var blueBarText = 10.6;
+                        //blue bar width need to calculate
+                        var blueBarWidth = 250;
+                        var blueBarTextRange = 250 - 20;
+                        blueCtx.fillStyle = "blue";
+                        blueCtx.fillRect(0,0,350,32);
+                        blueCtx.fillStyle = "#fff";
+                        blueCtx.textAlign = "right";
+                        blueCtx.font =  "12px DIN Next LT PRO";
+                        blueCtx.fillText( blueBarText+" Ride",blueBarTextRange,20); 
+                      
+
+                        var redBar = document.getElementById("red-bar");
+                        var redCtx = redBar.getContext("2d");
+                        var redBarText = 15.6;
+                        //red bar width need to calculate
+                        var redBarWidth = 350;
+                        var redBarTextRange = redBarWidth - 20;
+                        redCtx.fillStyle = "#FF0000";
+                        redCtx.fillRect(0,0,350,32);
+                        redCtx.fillStyle = "#fff";
+                        redCtx.textAlign = "right";
+                        redCtx.font = "12px DIN Next LT PRO";
+                        redCtx.fillText( redBarText+" Ride",redBarTextRange,20); 
+
+
+                        var efficiencyBar = document.getElementById("efficiency-bar");
+                        var efficiencyCtx = efficiencyBar.getContext("2d");
+                        var efficiencyText = 36.6;
+                        var efficiencyWidth = 330 * efficiencyText / 100;
+                        efficiencyCtx.fillStyle = "#B4B4B5";
+                        efficiencyCtx.fillRect(0,0,330,50);
+                        efficiencyCtx.fillStyle = "#000";
+                        efficiencyCtx.textAlign = "left";
+                        efficiencyCtx.font = "45px DIN Condensed";
+                        efficiencyCtx.fillText(efficiencyText,18,40); 
+                        console.log(efficiencyWidth);
+                        // $(".efficiency-bar").width(efficiencyText);
+                        // document.getElementsByClassName("efficiency-bar").width = efficiencyWidth;
+
+
+                        var communityBar = document.getElementById("community-bar");
+                        var communityCtx = communityBar.getContext("2d");
+                       communityCtx.fillStyle = "#EDDB70";
+                       communityCtx.fillRect(0,0,330,50);
+                       communityCtx.fillStyle = "#000";
+                       communityCtx.textAlign = "left";
+                       communityCtx.font = "10px DIN Next LT PRO";
+                       communityCtx.fillText("Community best (19 W/km)",15,13);
+
+                       var grayunits = document.getElementById("grayunits");
+                        var grayunitsCtx = grayunits.getContext("2d");
+                        grayunitsCtx.fillStyle = "#ABAAAF";
+                       grayunitsCtx.fillRect(0,0,200,50);
+                       grayunitsCtx.fillStyle = "#000";
+                       grayunitsCtx.textAlign = "left";
+                       grayunitsCtx.font = "9px DIN Next LT PRO";
+                       grayunitsCtx.fillText("Last month [ 0 units ]",30,15);
+
+
+                       var redunits = document.getElementById("redunits");
+                        var redunitsCtx = redunits.getContext("2d");
+                        redunitsCtx.fillStyle = "#F2A182";  
+                       redunitsCtx.fillRect(0,0,200,50);
+                       redunitsCtx.fillStyle = "#000";
+                        redunitsCtx.textAlign = "left";
+                       redunitsCtx.font = "9px DIN Next LT PRO";
+                       redunitsCtx.fillText("Jan'19 [ 9 units ]",80,25);
+
+                </script>
+        </body>
+</html>
