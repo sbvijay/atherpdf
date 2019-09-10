@@ -618,26 +618,26 @@
                     //    chargeInside.style.transform = "rotate(-90deg)";
 
 
-                       Highcharts.chart('graph_container', {
+                    Highcharts.chart('graph_container', {
                         chart: {
-        type: 'areaspline',
-        // height: (19 / 16 * 100) + '%'// 16:9 ratio
-        height: 112 + 'px'
-    },
+                            type: 'areaspline',
+                            // height: (19 / 16 * 100) + '%'// 16:9 ratio
+                            height: 112 + 'px'
+                        },
                         title: {
-        text: null
-    },
+                            text: null
+                        },
                         legend: {
-        layout: 'vertical',
-        align: 'left',
-        verticalAlign: 'top',
-        x: 50,
-        y: 50,
-        floating: true,
-        borderWidth: 0,
-        backgroundColor:
-            Highcharts.defaultOptions.legend.backgroundColor || '#FFFFFF'
-    },
+                            layout: 'vertical',
+                            align: 'left',
+                            verticalAlign: 'top',
+                            x: 50,
+                            y: 50,
+                            floating: true,
+                            borderWidth: 0,
+                            backgroundColor:
+                                Highcharts.defaultOptions.legend.backgroundColor || '#FFFFFF'
+                        },
                         xAxis: {
                             labels: {
                                 formatter: function () {
@@ -645,18 +645,17 @@
                                 }
                             },
                             lineColor: '#ccc',
-                            categories: [
-                                '35',
-                                '36',
-                                '37',
-                                '38',
-                                '39',
-                                '40',
-                                '41',
-                                '42',
-                                '43',
-                                '44'
-                            ],
+                            // categories: [
+                            //     '35',
+                            //     '36',
+                            //     '37',
+                            //     '38',
+                            //     '40',
+                            //     '41',
+                            //     '42',
+                            //     '43',
+                            //     '44'
+                            // ],
                             // plotBands: [{ // visualize the weekend
                             //     from: 1,
                             //     to: 7,
@@ -667,7 +666,7 @@
                                     color: '#ccc',
                                     dashStyle: 'Dot',
                                     width: 2,
-                                    zIndex: 10,
+                                    zIndex: 5,
                                     label: {
                                         text: null
                                     }
@@ -681,16 +680,16 @@
                                         text: null
                                     }
                                 }],
-                        },
+                            },
                         yAxis: {
-                            // categories: [
-                            //     '0',
-                            //     '10',
-                            //     '20',
-                            //     '30',
-                            //     '40',
-                            //     '50',
-                            // ],
+                        // categories: [
+                        //     '0',
+                        //     '10',
+                        //     '20',
+                        //     '30',
+                        //     '40',
+                        //     '50',
+                        // ],
                             title: {
                                 text: null
                             },
@@ -702,13 +701,13 @@
                             gridLineColor: 'transparent'
                         },
                         tooltip: {
-        shared: false,
-        valueSuffix: ' units',
-        enabled: false
-    },
+                            shared: false,
+                            valueSuffix: ' units',
+                            enabled: false
+                        },
                         credits: {
-        enabled: false
-    },
+                            enabled: false
+                        },
                         plotOptions: {
                             areaspline: {
                                 color: "#DBE4DC",
@@ -727,28 +726,33 @@
                         series: [{
                             showInLegend: false,
                             name: '',
-                           data: [
+                            // data: [ 0, 0, 20, 40, 40, 
+                            // {
+                            //     y: 0,
+                            //     x: 40,
+                            //     marker: {
+                            //         symbol: 'url(https://www.highcharts.com/samples/graphics/sun.png)'
+                            //     }
+                            // },
+                            // 30, 20, 0, 0 ],
+                            data: [
                                 [35, 0],
                                 [36, 0],
                                 [37, 20],
                                 [38, 40],
                                 [39, 50],
-                                [40, 40],
+                                [40, 30],
                                 [41, 20],
                                 [42, 0],
                                 [43, 0],
                                 {
-                                    x: 41,
+                                    x: 39,
                                     y: 0,
                                     marker: {
                                         symbol: 'url(https://www.highcharts.com/samples/graphics/sun.png)',
                                         // symbol: 'triangle',
                                         // lineColor: 'red',
-                                        // lineWidth: 2,
-                                        // fillColor: '#ccc',
-                                        // zIndex: 10,
-                                        // x: 0, 
-                                        // y: 0
+                                        fillColor: '#DBE4DC'
                                     },
                                     dataLabels: {
                                         enabled: true,
@@ -771,8 +775,8 @@
                             }
                         }],
                         exporting: {
-        enabled: false
-    }
+                            enabled: false
+                        }
                     });
                 </script>
         </body>
